@@ -30,7 +30,7 @@ class Vehicle:
             print("Successfully changed the number of wheels!")
 
     def set_brand(self, brand):
-        self.brand = brand
+        self.__brand = brand
 
     
 
@@ -38,7 +38,6 @@ ev1 = Vehicle(4, 'tesla', 200, 'Jane')
 ev2 = Vehicle(4, 'rivian', 250, 'John')
 
 owner = ev2.get_owner('12345')
-
 ev1.set_num_of_wheels(5)
 
 print(ev1.get_num_of_wheels())
