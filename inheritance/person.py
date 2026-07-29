@@ -1,7 +1,10 @@
 class Person:
 
+    # static variable
+    q = 50
+
     def __init__(self, name, age, height, weight):
-        self._name = name
+        self.__name = name
         self.age = age
         self.height = height
         self.weight = weight
@@ -12,13 +15,14 @@ class Person:
     def exercise(self):
         print('Person is exercising...')
 
+    def foo(self):
+        print(self.q)
+
 class Student(Person):
 
     def __init__(self, name, age, height, weight, student_id):
         super().__init__(name, age, height, weight)
         self.student_id = student_id
-
-        self._name
 
     # method overriding
     def sleep(self):
@@ -28,7 +32,7 @@ class Student(Person):
 s1 = Student('jane', 20, 170, 60, 101)
 s1.sleep()
 
-print(s1._name)
+s1.foo()
 
 # private: attribute cannot be access anywhere, except the class in which it was defined
 # protected: attrbiutes are accessible in all child classes, but not outside
