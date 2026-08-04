@@ -47,6 +47,8 @@ class Bird(Animal):
 
     def eat(self):
         print('eating birdfood...')
+        # this is fine, no errors, if protected
+        print(self.__name)
 
 class Dog(Animal):
      # constructor
